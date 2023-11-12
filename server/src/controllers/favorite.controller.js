@@ -35,7 +35,6 @@ const removeFavorite = async (req, res) => {
     if (!favorite) return responseHandler.notfound(res);
 
     await favorite.remove();
-
     responseHandler.ok(res);
   } catch {
     responseHandler.error(res);
